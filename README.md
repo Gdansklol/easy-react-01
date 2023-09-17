@@ -196,7 +196,7 @@ It is available for use.
  ** ex) onChange **
 
 
-## 04 - React hook / useState
+## 04 - React hook / useState 🤩
 
 Link : (https://react.dev/learn/state-a-components-memory)
 
