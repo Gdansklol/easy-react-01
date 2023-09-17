@@ -1,8 +1,13 @@
-import React, {useState} from 'react';
+# Test code for update button with javsScript code before use  react hoook useState
+
+`code`
+
+```bash
+
+import React from 'react';
 import './App.css';
 
 function App() {
-  const [text, setText] = useState('Pippi');
 
   const onSubmit = () => {
     alert("Good! Submitted. 😂")
@@ -14,12 +19,12 @@ function App() {
     }
   }
 
-// let text = 'Pippi'
+  let text = "Pippi";
 
   const upDateText = () => {
-    // text = "Frontend Developer";
-    console.log(text);
-    setText('Frontend Developer') 
+    text = "Frontend Developer";
+    console.log(text)
+    document.getElementById('text').innerHTML=text;
   }
 
   return (
@@ -33,7 +38,7 @@ function App() {
 
       <br /><br/>
 
-    <span>{text}</span>
+    <span id='text'>{text}</span>
     <button onClick={upDateText}>Update</button>
 
 
@@ -42,3 +47,8 @@ function App() {
   );
 }
 export default App;
+
+```
+
+# 04. react useState 
+> ex) * text update button *
