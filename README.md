@@ -1,6 +1,6 @@
 # Fun fun  React study :smiley:
 
-# Install/Downloads nord js
+## Install/Downloads nord js
 
 Link : (https://nodejs.org/en/download)
 
@@ -8,7 +8,7 @@ Link : (https://nodejs.org/en/download)
 
 ```bash
 
-nord -v
+node -v
 
 npm -v
 
@@ -22,14 +22,14 @@ link : (https://react.dev/learn)
 npx create-react-app . / or + [name of directory]
 
 ```
-## Run react app
+### Run react app
 
 ```bash
 npm start
 ```
 
 ## 02. Introduction to folder structure & components
->  1.  open src> index.js file
+ 1.  open src> index.js file
 
 Delete files or statements that will not be used.
 
@@ -38,8 +38,8 @@ If I delete React's strict mode and just change the component name, it works.
 If you want to get help from React’s strict mode, you can wrap your component in strict mode.
 
 2. open puplc > index.html 
->  <div id="root"></div>
-ex )  <div id="root"></div>
++ <div id="root"></div>
++ ex )  <div id="root"></div>
 
 3. Let’s take a look at how components are structured in React.
 
@@ -134,13 +134,15 @@ export default App;
 Another event This time, let's take a look at onKeyUp.
 
 And let's put this function inside the event handler.
+
+```bash
 ex)
   const onKeyUpEnter = (event) => {
      if (event.keyCode === 13) {
        onSubmit();
      }
    }
-
+ ```
 
 ```bash
 
