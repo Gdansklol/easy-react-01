@@ -228,7 +228,14 @@ Mainly used cases
 
 * A similar function is stopPropagation. This function prevents events from propagating to parent tags. *
 
+## _Question_
+**It works well just by using the input and button tags.
+  Why bother wrapping it again with a form tag?**
 
+
+
+**Answer>
+There is no major difference, but the tag itself tells you that this part is a form, and there is also a small advantage of being able to submit when you press enter within the input.**
 
 
 
