@@ -1,6 +1,6 @@
 # Fun fun  React study :smiley:
 
-## Install/Downloads nord js
+## Install/Downloads node js
 
 Link : (https://nodejs.org/en/download)
 
@@ -47,7 +47,7 @@ If you want to get help from React’s strict mode, you can wrap your component 
 
 5. Create a function, and the return value is the jsx value.
 
-*jsx : It is a grammar that extends JavaScript.*
+   *jsx : It is a grammar that extends JavaScript.*
 
 6. Let's change the syntax of the App component.
 Let's run it and see if it works properly.
