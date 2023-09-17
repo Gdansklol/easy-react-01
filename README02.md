@@ -104,7 +104,112 @@ export default App;
 # 05 - useState in form 
 
 ```bash
+import React, {useState} from 'react';
+import './App.css';
+
+function App() {
+  const [userName, setUserName] = useState('');
+  const [passWord, setPassWord] = useState('');
+  const onSubmit = () => {
+    alert("Good! Submitted. 😂")
+  };
+
+  console.log(userName);
+  console.log(passWord);
+
+  return (
+  <div >
+    <div className='container'>Fun react hook Market 😉
+     <br/>
+     <input 
+     placeholder='Username' 
+     value={userName}
+     onChange={(e) => setUserName(e.target.value)}
+  
+     /><br />
+   
+     <input
+     placeholder='Password'
+     value={passWord}
+     onChange={(e)=>setPassWord(e.target.value)}
+      /><br/>
+    <button onClick={onSubmit}>Login</button>
+
+
+      </div>
+  </div>
+  );
+}
+export default App;
 
 
 ```
+
+> changes with wrap <form></form> 
+
+ex) `code`
+
+```bash
+const onSubmit = (event) => {
+    event.preventDefault();
+    console.log(userName, passWord);
+  };
+
+```
+
+> When the a tag or submit tag is clicked, it moves through the href or is executed by refreshing the window.
+
+You can prevent this behavior through preventDefault.
+
+ 
+
+Mainly used cases
+
+1. When not moving to the href link even when the a tag is clicked
+
+2. If you want to prevent a new execution even if you press the submit button in the form (submit works).
+
+* A similar function is stopPropagation. This function prevents events from propagating to parent tags.*
+
+```bash
+import React, {useState} from 'react';
+import './App.css';
+
+function App() {
+  const [userName, setUserName] = useState('');
+  const [passWord, setPassWord] = useState('');
+  const onSubmit = (event) => {
+    event.preventDefault();
+    console.log(userName, passWord);
+  };
+
+  return (
+  <div >
+    <form onSubmit={onSubmit}>
+    <div className='container'>Fun react hook Market 😉
+     <br/>
+     <input 
+     placeholder='Username' 
+     value={userName}
+     onChange={(e) => setUserName(e.target.value)}
+  
+     /><br />
+   
+     <input
+     placeholder='Password'
+     value={passWord}
+     onChange={(e)=>setPassWord(e.target.value)}
+      /><br/>
+    <button type='submit'>Login</button>
+
+
+      </div>
+      </form>
+  </div>
+  );
+}
+export default App;
+
+```
+
 

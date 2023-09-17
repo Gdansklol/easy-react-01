@@ -4,15 +4,14 @@ import './App.css';
 function App() {
   const [userName, setUserName] = useState('');
   const [passWord, setPassWord] = useState('');
-  const onSubmit = () => {
-    alert("Good! Submitted. 😂")
+  const onSubmit = (event) => {
+    event.preventDefault();
+    console.log(userName, passWord);
   };
-
-  console.log(userName);
-  console.log(passWord);
 
   return (
   <div >
+    <form onSubmit={onSubmit}>
     <div className='container'>Fun react hook Market 😉
      <br/>
      <input 
@@ -27,10 +26,11 @@ function App() {
      value={passWord}
      onChange={(e)=>setPassWord(e.target.value)}
       /><br/>
-    <button onClick={onSubmit}>Login</button>
+    <button type='submit'>Login</button>
 
 
       </div>
+      </form>
   </div>
   );
 }

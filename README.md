@@ -200,6 +200,33 @@ It is available for use.
 
 Link : (https://react.dev/learn/state-a-components-memory)
 
+## # 05 - useState in form 
+
+> > changes with wrap <form></form> 
+
+ex) `code`
+
+```bash
+const onSubmit = (event) => {
+    event.preventDefault();
+    console.log(userName, passWord);
+  };
+
+```
+
+> When the a tag or submit tag is clicked, it moves through the href or is executed by refreshing the window.
+
+You can prevent this behavior through preventDefault.
+
+ 
+
+Mainly used cases
+
+1. When not moving to the href link even when the a tag is clicked
+
+2. If you want to prevent a new execution even if you press the submit button in the form (submit works).
+
+* A similar function is stopPropagation. This function prevents events from propagating to parent tags. *
 
 
 
