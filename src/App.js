@@ -1,36 +1,27 @@
-import React, {useState} from 'react';
+// 05 - useEffect
+import React, {useEffect, useState} from 'react';
 import './App.css';
 
 function App() {
-  const [userName, setUserName] = useState('');
-  const [passWord, setPassWord] = useState('');
-  const onSubmit = (event) => {
-    event.preventDefault();
-    console.log(userName, passWord);
-  };
+  const [count, setCount] = useState(0);
+ 
+ useEffect (()=>{
+  console.log(count)
+ })
 
+  const increment = () => {
+    setCount(count +1);
+  }
+
+  const decrement = () => {
+    setCount(count -1)
+  }
+ console.log('ok rendering')
   return (
-  <div >
-    <form onSubmit={onSubmit}>
-    <div className='container'>Fun react hook Market 😉
-     <br/>
-     <input 
-     placeholder='Username' 
-     value={userName}
-     onChange={(e) => setUserName(e.target.value)}
-  
-     /><br />
-   
-     <input
-     placeholder='Password'
-     value={passWord}
-     onChange={(e)=>setPassWord(e.target.value)}
-      /><br/>
-    <button type='submit'>Login</button>
-
-
-      </div>
-      </form>
+  <div className='App' >
+    <h1>Code with useEffect</h1>
+    <button onClick={increment}>+ Increment button</button>
+    <button onClick={decrement}>- Decrement button</button>
   </div>
   );
 }
