@@ -57,3 +57,42 @@ return (
   );
 }
 export default App;
+
+#
+
+code
+
+```bash
+
+// 07 Eliminate repetition with components
+
+import React, { useEffect, useState } from 'react';
+import './App.css';
+
+
+function App() {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  return (
+    <div className='App'>
+      <h1> Cruella Lee </h1>
+      <button onClick={increment}>Click {count}</button>
+    </div>
+  );
+};
+
+export default App
+
+
+```
+
+<p> For some reason, we use this count table. 
+    I want to use one more count button. 
+    What should I odn in that case? In that case, I create one more useState and count1, setCount1 .  inital valu is 0. and our function uses increment1. 
+
+
+</p>
