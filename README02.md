@@ -250,3 +250,38 @@ function App() {
 
 export default App;
 ```
+or
+
+```bash
+
+// 05- useState, useEffect
+
+import React,{useState,useEffect} from 'react';
+
+function App() {
+const [count, setCount] =useState(0);
+const [cruella, setCruella] =useState(0);
+useEffect (()=>{
+console.log(count,cruella)
+},[count,cruella])
+
+useEffect (()=> {
+console.log('first rendreing with empty array []')
+},[])
+
+const increment =() => {
+setCount(count +1)
+}
+
+return (
+<div className='App'>
+<h1>Cruella coder</h1>
+<button onClick={increment}>Click for increment</button>
+<button onClick={()=> setCruella()}>Click 2</button>
+</div>
+);
+};
+
+export default App;
+
+```
