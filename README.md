@@ -4,7 +4,7 @@
 
 # <img src="https://github.com/Gdansklol/react-level-01/assets/56717993/a1c47e81-9bf9-411f-bd47-ac7197cc6977" width="200" height="200"/>
 
-![react1](https://github.com/Gdansklol/react-level-01/assets/56717993/a1c47e81-9bf9-411f-bd47-ac7197cc6977)
+<!-- ![react1](https://github.com/Gdansklol/react-level-01/assets/56717993/a1c47e81-9bf9-411f-bd47-ac7197cc6977) -->
 
 ## Install/Downloads node js
 
