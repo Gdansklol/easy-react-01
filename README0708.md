@@ -95,34 +95,56 @@ export default App
     What should I odn in that case? In that case, I create one more useState and count1, setCount1 .  inital valu is 0. and our function uses increment1. 
 </p>
 
-
 `code`
 
-
 ```js
-
 // 07/30 Eliminate repetition with components
 // create components folder in src and then create Counter.js file/component
 
-import React, { useState } from 'react';
-import './App.css';
-import Counter from './components/Counter'
-  
+import React, { useState } from "react";
+import "./App.css";
+import Counter from "./components/Counter";
 
 function App() {
-
   return (
-  <div className='App' >
-    <h1>Cruella Coder</h1>
-    <Counter />
-    <Counter />
-    <Counter />
-  </div>
+    <div className="App">
+      <h1>Cruella Coder</h1>
+      <Counter />
+      <Counter />
+      <Counter />
+    </div>
   );
-};
+}
 
-export default App
-
+export default App;
 ```
 
 # 08- Sending data to child components Props!
+
+```javascript
+// 07/30 Eliminate repetition with components
+// create componeclickHandler
+// Let’s learn how to send data from a parent component to a child component.
+
+import React, { useState } from "react";
+import "./App.css";
+import Counter from "./components/Counter";
+
+function App() {
+  const [buttonName, setButtonName] = useState("clickB:");
+  const clickHandler = () => {
+    setButtonName("Klicka 😃");
+  };
+  return (
+    <div className="App">
+      <h1>Cruella Coder</h1>
+      <Counter click="clickA:" />
+      <Counter click={buttonName} />
+      <Counter />
+      <button onClick={clickHandler}>clickB</button>
+    </div>
+  );
+}
+
+export default App;
+```

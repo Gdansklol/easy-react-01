@@ -1,30 +1,25 @@
-// 07/30 Eliminate repetition with components
-// create componeclickHandler
-// Let’s learn how to send data from a parent component to a child component.
+// 09/30 conditional rendring with toogle button true or false
 
-import React, { useState } from 'react';
-import './App.css';
-import Counter from './components/Counter'
-  
+import React, { useState, useEffect } from 'react';
 
 function App() {
-  const [buttonName, setButtonName] = useState('clickB:');
-  const clickHandler = () => {
-    setButtonName('Klicka 😃')
-  };
-  return (
-  <div className='App' >
-    <h1>Cruella Coder</h1>
-    <Counter click="clickA:" />
-      <Counter click={buttonName} />
-      <Counter />
-      <button
-        onClick={clickHandler}
-      >
-        clickB
-      </button>
-  </div>
-  );
-};
+  const [condition, setCondition] = useState(false);
+  const toogle = () => setCondition(!condition);
+  useEffect(() => {
+    console.log(condition);
+  }, [condition]);
 
-export default App
+  const renderCondition = condition
+    ? <div>True</div>
+    : <div>False</div>
+
+  return (
+    <div>
+      <h1>Cruella Lee Coder </h1>
+      {renderCondition }
+      <button onClick={toogle}>Toggle Button True / False</button>
+    </div>
+  )
+}
+
+export default App;
