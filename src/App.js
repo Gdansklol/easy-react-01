@@ -10,14 +10,16 @@ function App() {
   }, [condition]);
 
   const renderCondition = condition
-    ? <div>True</div>
-    : <div>False</div>
+    ? 'True'
+    : 'False'
 
   return (
     <div>
       <h1>Cruella Lee Coder </h1>
-      {renderCondition }
-      <button onClick={toogle}>Toggle Button True / False</button>
+      <div>
+            {renderCondition}
+      </div>
+      <button onClick={toogle}>Toogle btn True/False</button>
     </div>
   )
 }
