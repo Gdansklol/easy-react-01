@@ -6,11 +6,14 @@ const Counter = (props) => {
     const increment = () => {
         setCount(count + 1);
     };
-    console.log(props.click);
-    
+    // console.log(props.click);
+
+    const clickString = props.click || 'clickB:';
+
     return (
         <button onClick={increment}>
-            {props.click }{count}
+            {/* {props.click }{count} */}
+            {clickString}{count}
         </button>
     );
 };
