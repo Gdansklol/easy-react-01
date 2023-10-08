@@ -1,6 +1,6 @@
 # Fun fun React study :smiley:
 
-![react1](https://github.com/Gdansklol/react-level-01/assets/56717993/a1c47e81-9bf9-411f-bd47-ac7197cc6977)
+![react1](https://github.com/Gdansklol/react-level-01/assets/56717993/a1c47e81-9bf9-411f-bd47-ac7197cc6977){: width="100" height="100"}
 
 ## Install/Downloads node js
 
