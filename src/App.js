@@ -1,29 +1,19 @@
-// 07 Eliminate repetition with components
+// 07/30 Eliminate repetition with components
+// create components folder in src and then create Counter.js file/component
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
+import Counter from './components/Counter'
   
 
 function App() {
-  const [count, setCount] = useState(0);
- 
- useEffect (()=>{
-  console.log(count)
- })
 
-  const increment = () => {
-    setCount(count + 1);
-  };
-
-  const decrement = () => {
-    setCount(count -1)
-  }
- console.log('ok rendering')
   return (
   <div className='App' >
-    <h1>Code with useEffect</h1>
-    <button onClick={increment}>+ Increment button</button>
-    <button onClick={decrement}>- Decrement button</button>
+    <h1>Cruella Coder</h1>
+    <Counter />
+    <Counter />
+    <Counter />
   </div>
   );
 };
