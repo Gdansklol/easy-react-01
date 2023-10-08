@@ -11,7 +11,7 @@ function App() {
   return (
   <div className='App' >
     <h1>Cruella Coder</h1>
-    <Counter />
+    <Counter click="clickA:" />
     <Counter />
     <Counter />
   </div>
