@@ -2,7 +2,9 @@
 
 @bluecrownLee :+1: This PR looks great - it's ready to merge! :shipit:
 
-![react1](https://github.com/Gdansklol/react-level-01/assets/56717993/a1c47e81-9bf9-411f-bd47-ac7197cc6977 width="60%")
+# <img src="https://github.com/Gdansklol/react-level-01/assets/56717993/a1c47e81-9bf9-411f-bd47-ac7197cc6977.png" width="60%">
+
+![react1](https://github.com/Gdansklol/react-level-01/assets/56717993/a1c47e81-9bf9-411f-bd47-ac7197cc6977)
 
 ## Install/Downloads node js
 
