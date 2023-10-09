@@ -1,5 +1,5 @@
-//*** / 12/30  
-// Creating a movie list addition form 1
+//*** / 13/30  
+// Creating a movie list addition form 2
 
 import React,{useState, useEffect} from 'react';
 import Movie from './components/Movie';
@@ -29,19 +29,11 @@ function App() {
     // console.log(movieTitle, movieYear);
 
     setMovies([
-      ...movies,{
-      title: movieTitle,
-      year:  movieYear,
-    }]);
-
-    // reset for input filds empty 
-    setMovieTitle('');
-    setMovieYear('')
-
-    // movies.push({
-    //   title: movieTitle,
-    //   year: movieYear,
-    // })
+      ...movies,
+      {
+        title: movieTitle,
+      year: movieYear,
+    }])
    };
   
   return (
