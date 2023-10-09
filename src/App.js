@@ -32,7 +32,11 @@ function App() {
       ...movies,{
       title: movieTitle,
       year:  movieYear,
-    }])
+    }]);
+
+    // reset for input filds empty 
+    setMovieTitle('');
+    setMovieYear('')
 
     // movies.push({
     //   title: movieTitle,
