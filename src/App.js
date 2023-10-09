@@ -1,5 +1,6 @@
-//*** / 13/30  
+//*** / 14/30  
 // Creating a movie list addition form 2
+// Let’s make the form into another component or remove in App.js
 
 import React,{useState, useEffect} from 'react';
 import Movie from './components/Movie';
