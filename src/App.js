@@ -33,7 +33,10 @@ function App() {
       {
         title: movieTitle,
       year: movieYear,
-    }])
+    }]);
+    // reset for empty input after add menu 
+      setMovieTitle('');
+      setMovieYear('')
    };
   
   return (
