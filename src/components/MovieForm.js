@@ -13,27 +13,17 @@ const MovieForm = ({addMovie}) => {
 
      const onSubmit = (event) => {
       event.preventDefault();
-        addMovie({
-            title: movieTitle,
-            year: movieYear,
-        });
-        resetForm();
-   
-    //   setMovies([
-    //     ...movies,{
-    //     title: movieTitle,
-    //     year:  movieYear,
-    //   }]);
-  
-      // reset for input filds empty 
+      addMovie({
+        title: movieTitle,
+        year: movieYear,
+      });
     //   setMovieTitle('');
     //   setMovieYear('')
-  
-    
+      resetForm();
      };
+
     
     return (
- 
         <form onSubmit={onSubmit}>
           <input
           type='text' 

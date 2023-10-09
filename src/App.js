@@ -2,12 +2,13 @@
 // Creating a movie list addition form 2
 // Let’s make the form into another component or remove in App.js
 
-import React,{useState, useEffect} from 'react';
+import React,{useState} from 'react';
 import Movie from './components/Movie';
+import MovieForm from './components/MovieForm';
 
 function App() {
-  const [movieTitle, setMovieTitle] =useState('');
-  const [movieYear, setMovieYear] =useState('');
+  // const [movieTitle, setMovieTitle] =useState('');
+  // const [movieYear, setMovieYear] =useState('');
   const [movies, setMovies] = useState([
     {title: 'No Hard Feelings1', year:2020},
     {title: 'No Hard Feelings2', year:2021},
@@ -15,49 +16,27 @@ function App() {
     {title: 'No Hard Feelings4', year:2023},
   ]);
 
-  useEffect(()=>{
-    console.log('rendering for state change')
-  });
-
    const renderMovies = movies.map(movie => {
       return (
         <Movie movie={movie} key={movie.title}/>
       );
    });
 
-   const addMovie = (event) => {
-    event.preventDefault();
-    // console.log(movieTitle, movieYear);
-
+   // sending props , addMovie to a child component 
+   const addMovie = (movie) => {
     setMovies([
       ...movies,
-      {
-        title: movieTitle,
-      year: movieYear,
-    }]);
+      movie
+  ]);
     // reset for empty input after add menu 
-      setMovieTitle('');
-      setMovieYear('')
+      // setMovieTitle('');
+      // setMovieYear('')
    };
   
   return (
     <div className='App'>
       <h1>Movie List </h1>
-      <form onSubmit={addMovie}>
-        <input
-        type='text' 
-        value={movieTitle}
-        placeholder='movie title'
-        onChange={e=>setMovieTitle(e.target.value)}/>
-        <br/>
-        <input
-        type='text' 
-        value={movieYear}
-        placeholder='movie year'
-        onChange={e=>setMovieYear(e.target.value)}/>
-        <br/>
-        <button type='submit'>Add movie</button>
-      </form>
+      <MovieForm addMovie={addMovie}/>
       {renderMovies}
     </div>
   )
